@@ -1,0 +1,7 @@
+specVersion: "2.6"
+metadata:
+  name: sap.ui.demo.walkthrough
+type: application
+framework:
+  name: SAPUI5
+  version: "1.112.1"

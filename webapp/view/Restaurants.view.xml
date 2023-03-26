@@ -1,0 +1,15 @@
+<mvc:View
+    controllerName="sap.ui.demo.walkthrough.controller.Restaurants"
+    xmlns="sap.m"
+    xmlns:mvc='sap.ui.core.mvc'>
+        <List 
+            headerText="{i18n>helloPanelTitle} - {i18n>restaurantListTitle}"
+            class="sapUiResponsiveMargin"
+            width="auto"
+            items="{restaurant>/Restaurants}" >
+            <items>
+                <ObjectListItem 
+                    title="{restaurant>Name}" />
+            </items>
+        </List>
+</mvc:View>
