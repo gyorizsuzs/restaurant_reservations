@@ -1,7 +1,8 @@
 <mvc:View
     controllerName="sap.ui.demo.walkthrough.controller.Detail"
 	xmlns="sap.m"
-	xmlns:mvc="sap.ui.core.mvc">
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:unified="sap.ui.unified" >
 	<Page
 		title="{i18n>detailPageTitle}"
         showNavButton="true"
@@ -11,5 +12,40 @@
 		<ObjectHeader
             intro="{restaurant>Address}"
 			title="{restaurant>Name}"/>
+			<VBox class="sapUiSmallMargin">
+				<SinglePlanningCalendar
+					id="SPC1"
+					title= "{i18n>whatnot}"
+					appointmentSelect="handleAppointmentSelect"
+					headerDateSelect="handleHeaderDateSelect"
+					startDateChange="handleStartDateChange"
+					startDate="{path: '/startDate'}"
+					appointments="{path: 'Bookings>/'}">
+					<actions>
+						<Button id="addNewAppointment" text="{i18n>detailPageTitle}" press="handleAppointmentCreate" tooltip="Add new appointment" />
+					</actions>
+					<views>
+						<SinglePlanningCalendarDayView key="DayView" title="Day" />
+						<SinglePlanningCalendarWeekView key="WeekView" title="Week" />
+					</views>
+					<appointments>
+						<unified:CalendarAppointment
+							title= "{Bookings>customer}"
+							text= "{Bookings>pax}"
+							type= "{Bookings>type}"
+							icon= "{icon}"
+							startDate= "{path: 'Bookings>startDate', formatter: '.formatDate'}"
+							endDate= "{path: 'Bookings>endDate', formatter: '.formatDate'}">
+						</unified:CalendarAppointment>
+					</appointments>
+				</SinglePlanningCalendar>
+			</VBox>
+
+			<FlexBox>
+				<Label text="Send us a message:" class="sapUiSmallMarginEnd" />
+				<Input ></Input>
+				<Button press=".onAddMessage" text="Send message" />
+				<Button press=".onRemoveAll" text="Clear" />
+			</FlexBox>
 	</Page>
 </mvc:View>

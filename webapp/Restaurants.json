@@ -1,21 +1,20 @@
 {
   "Restaurants": [
     {
-      "id": 1,
       "Name": "Côte Covent Garden",
       "Address": "17-21 Tavistock St",
       "OpeningHours": "11:30 AM - 10:00 PM",
       "Bookings": [
         {
-          "date": "2023-04-01",
-          "startTime": "12:00 PM",
+          "startDate": "2023-04-01",
+          "endDate": "12:00 PM",
           "endTime": "2:00 PM",
-          "reservedBy": "John Doe"
+          "customer": "John Doe",
+          "pax": "4"
         }
       ]
     },
     {
-      "id": 2,
       "Name": "Côte Sloane Square",
       "Address": "7-12 Sloane Square",
       "OpeningHours": "9:00 AM - 10:00 PM",
@@ -24,18 +23,19 @@
           "date": "2023-04-01",
           "startTime": "1:00 PM",
           "endTime": "3:00 PM",
-          "reservedBy": "Joe Citizen"
+          "reservedBy": "Joe Citizen",
+          "pax": "5"
         },
         {
           "date": "2023-04-01",
           "startTime": "4:00 PM",
           "endTime": "6:00 PM",
-          "reservedBy": "Jane Smith"
+          "reservedBy": "Jane Smith",
+          "pax": "2"
         }
       ]
     },
     {
-      "id": 3,
       "Name": "Côte Royal Festival Hall",
       "Address": "Festival Terrace, Southbank Centre",
       "OpeningHours": "9:00 AM - 10:00 PM",
@@ -44,12 +44,12 @@
           "date": "2023-04-01",
           "startTime": "2:00 PM",
           "endTime": "4:00 PM",
-          "reservedBy": "Richard Roe"
+          "reservedBy": "Richard Roe",
+          "pax": "2"
         }
       ]
     },
     {
-      "id": 4,
       "Name": "Côte Marylebone",
       "Address": "26-27 Devonshire St",
       "OpeningHours": "9:00 AM - 10:00 PM",
