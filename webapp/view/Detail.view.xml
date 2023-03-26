@@ -9,7 +9,7 @@
         >
         
 		<ObjectHeader
-            intro="{restaurant>Name}"
-			title="{restaurant>Address}"/>
+            intro="{restaurant>Address}"
+			title="{restaurant>Name}"/>
 	</Page>
 </mvc:View>

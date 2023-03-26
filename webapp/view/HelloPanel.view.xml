@@ -7,23 +7,8 @@
       class="sapUiResponsiveMargin"
       width="auto" >
       <content>
-        <Button
-        id="helloDialogButton"
-        icon="sap-icon://world"
-        text="{i18n>openDialogButtonText}"
-        press=".onOpenDialog"
-        class="sapUiSmallMarginEnd"/>
-        <Button
-        text="{i18n>showHelloButtonText}"
-        press=".onShowHello"
-        class="myCustomButton" />
-     <Input
-        value="{/recipient/name}"
-        description="Hello {/recipient/name}"
-        valueLiveUpdate="true"
-        width="60%"/>
      <FormattedText 
-         htmlText="Hello {/recipient/name}"
+         htmlText="The French approach to eating well is rooted in the concept of “terroir” – showing respect for the earth and the things it gives us. We only work with farmers and producers who share this mindset, ensuring we can offer you the best-tasting seasonal produce."
          class="sapUiSmallMargin sapThemeHighlight-asColor myCustomText"
      ></FormattedText>
       </content>
