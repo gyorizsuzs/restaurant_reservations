@@ -4,15 +4,6 @@
    xmlns:mvc="sap.ui.core.mvc"
   displayBlock="true">
   <Shell >
-      <App id="app" class="myApp">
-         <pages>
-            <Page title="{i18n>homePageTitle}">
-                  <content>
-                     <mvc:XMLView 
-                     viewName="sap.ui.demo.walkthrough.view.Restaurants" />
-                  </content>
-            </Page>
-         </pages>
-      </App>
+      <App id="app" class="myApp"/>
   </Shell>
 </mvc:View>

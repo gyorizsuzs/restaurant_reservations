@@ -9,7 +9,9 @@
             items="{restaurant>/Restaurants}" >
             <items>
                 <ObjectListItem 
-                    title="{restaurant>Name}" />
+                    title="{restaurant>Name}"
+                    type="Navigation"
+					press="onPress" />
             </items>
         </List>
 </mvc:View>
