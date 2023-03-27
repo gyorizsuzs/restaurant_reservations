@@ -38,29 +38,29 @@ sap.ui.define(
         oModel.setData({
           appointments: [
             {
-              title: "mr smith",
-              text: "haliiiii",
+              title: "John Doe",
+              text: "Table by the window.",
               type: 3,
               startDate: new Date("2023", "3", "1", "12", "0"),
               endDate: new Date("2023", "3", "1", "14", "0"),
             },
             {
-              title: "kispista",
-              text: "sziustok",
+              title: "Jane Smith",
+              text: "Annyversary - complimentary bottle of Champagne.",
               type: 2,
-              startDate: new Date("2023", "3", "1", "14", "0"),
-              endDate: new Date("2023", "3", "1", "16", "0"),
+              startDate: new Date("2023", "2", "31", "14", "0"),
+              endDate: new Date("2023", "2", "31", "16", "0"),
             },
             {
-              title: "bangó margit",
-              text: "table by the window",
+              title: "Joe Citizen",
+              text: "Going to theathre, have to leave before 4PM.",
               type: 5,
-              startDate: new Date("2023", "3", "1", "13", "0"),
-              endDate: new Date("2023", "3", "1", "15", "0"),
+              startDate: new Date("2023", "2", "30", "13", "0"),
+              endDate: new Date("2023", "2", "30", "15", "0"),
             },
             {
-              title: "kukucska kálmán",
-              text: "birthday cake",
+              title: "Richard Roe",
+              text: "Bringing birthday cake.",
               type: 2,
               startDate: new Date("2023", "3", "1", "15", "0"),
               endDate: new Date("2023", "3", "1", "17", "0"),
@@ -73,19 +73,19 @@ sap.ui.define(
             },
             {
               text: "2",
-              type: CalendarDayType.Type01,
+              type: CalendarDayType.Type02,
             },
             {
               text: "3",
-              type: CalendarDayType.Type01,
+              type: CalendarDayType.Type03,
             },
             {
               text: "4",
-              type: CalendarDayType.Type01,
+              type: CalendarDayType.Type04,
             },
             {
               text: "5",
-              type: CalendarDayType.Type01,
+              type: CalendarDayType.Type05,
             },
           ],
         });
@@ -524,6 +524,13 @@ sap.ui.define(
         ) {
           oErrorState.errorState = true;
           oErrorState.errorMessage = "Start date should be before End date";
+          this._setDateValueState(oDateTimePickerStart, oErrorState);
+          this._setDateValueState(oDateTimePickerEnd, oErrorState);
+          //limiting duration
+        } else if (oEndDate - oStartDate > 2) {
+          oErrorState.errorState = true;
+          oErrorState.errorMessage =
+            "Tables are available only for 2 hours slots.";
           this._setDateValueState(oDateTimePickerStart, oErrorState);
           this._setDateValueState(oDateTimePickerEnd, oErrorState);
         } else {
