@@ -38,27 +38,30 @@ sap.ui.define(
         oModel.setData({
           appointments: [
             {
-              title: "csumi",
+              title: "mr smith",
               text: "haliiiii",
-              type: CalendarDayType.Type03,
+              type: 3,
               startDate: new Date("2023", "3", "1", "12", "0"),
               endDate: new Date("2023", "3", "1", "14", "0"),
             },
             {
-              title: "",
-              type: CalendarDayType.Type03,
+              title: "kispista",
+              text: "sziustok",
+              type: 2,
               startDate: new Date("2023", "3", "1", "14", "0"),
               endDate: new Date("2023", "3", "1", "16", "0"),
             },
             {
-              title: "",
-              type: CalendarDayType.Type03,
+              title: "bangó margit",
+              text: "table by the window",
+              type: 5,
               startDate: new Date("2023", "3", "1", "13", "0"),
               endDate: new Date("2023", "3", "1", "15", "0"),
             },
             {
-              title: "kukucs",
-              type: CalendarDayType.Type03,
+              title: "kukucska kálmán",
+              text: "birthday cake",
+              type: 2,
               startDate: new Date("2023", "3", "1", "15", "0"),
               endDate: new Date("2023", "3", "1", "17", "0"),
             },

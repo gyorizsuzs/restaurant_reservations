@@ -19,7 +19,7 @@
 				layout="ResponsiveGridLayout"
 				singleContainerFullSize="false">
 			<Label
-					text="Additional information"
+					text="Special request"
 					labelFor="moreInfo"/>
 			<Text id="moreInfoText" text="{text}"/>
 			<Label text="From" labelFor="startDate"/>
@@ -40,7 +40,7 @@
 					selected="false"
 					visible="false"
 					enabled="false"/>
-			<Label text="Type" labelFor="appType"/>
+			<Label text="Number of Guests" labelFor="appType"/>
 			<Text id="appTypeText" text="{ path: 'type', formatter: '._typeFormatter'}"/>
 		</f:SimpleForm>
 	</ResponsivePopover>

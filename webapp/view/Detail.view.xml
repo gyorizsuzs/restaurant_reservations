@@ -34,7 +34,7 @@
 				enableAppointmentsResize="{settings>/enableAppointmentsResize}"
 				enableAppointmentsCreate="{settings>/enableAppointmentsCreate}"
 				stickyMode="{settings>/stickyMode}"
-				appointments="{restaurant>Bookings}">
+				appointments="{path: '/appointments'}">
 				<actions>
 					<Button id="addNewAppointment" text="{i18n>helloPanelTitle}" press="handleAppointmentCreate" tooltip="Add new appointment" />
 				</actions>
@@ -45,12 +45,12 @@
 				</views>
 				<appointments>
 					<unified:CalendarAppointment
-						title= "{restaurant>Bookings/customer}"
-						text= "{restaurant>Bookings/message}"
-						type= "{type}"
+						title= "{title}"
+						text= "{text}"
+						type= "Type03"
 						icon= "{icon}"
-						startDate= "{restaurant>Bookings/startDate}"
-						endDate= "{restaurant>Bookings/endDate}">
+						startDate= "{startDate}"
+						endDate= "{endDate}">
 					</unified:CalendarAppointment>
 				</appointments>
 			</SinglePlanningCalendar>

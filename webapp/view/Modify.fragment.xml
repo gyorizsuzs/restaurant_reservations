@@ -25,11 +25,11 @@
 				<Input
 					id="inputEmail"
 					type="Email"
-					placeholder="Enter email"
+					placeholder="example@example.com"
 					required="true"
 					class="sapUiSmallMarginBottom" />
-				<Label text="Message to the restaurant" labelFor="moreInfo" />
-				<Input id="moreInfo" placeholder="Type here" />
+				<Label text="Special request" labelFor="moreInfo" />
+				<Input id="moreInfo" placeholder="Type here" maxLength="500" />
 				<Label text="Number of guests" labelFor="inputInfo"/>
 				<Select
 					id="appType"
