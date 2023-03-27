@@ -37,7 +37,8 @@
 			<CheckBox
 					id="allDayText"
 					text="All-day"
-					selected="{allDay>/allDay}"
+					selected="false"
+					visible="false"
 					enabled="false"/>
 			<Label text="Type" labelFor="appType"/>
 			<Text id="appTypeText" text="{ path: 'type', formatter: '._typeFormatter'}"/>

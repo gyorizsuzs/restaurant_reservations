@@ -39,7 +39,8 @@ sap.ui.define(
           startDate: new Date("2023", "3", "1"),
           appointments: [
             {
-              title: "",
+              title: "{restaurant>/Bookings/customer}",
+              text: "haliiiii",
               type: CalendarDayType.Type03,
               startDate: new Date("2023", "3", "1", "12", "0"),
               endDate: new Date("2023", "3", "1", "14", "0"),
@@ -57,7 +58,7 @@ sap.ui.define(
               endDate: new Date("2023", "3", "1", "15", "0"),
             },
             {
-              title: "",
+              title: "kukucs",
               type: CalendarDayType.Type03,
               startDate: new Date("2023", "3", "1", "15", "0"),
               endDate: new Date("2023", "3", "1", "17", "0"),
@@ -65,7 +66,23 @@ sap.ui.define(
           ],
           supportedAppointmentItems: [
             {
-              text: "Booking",
+              text: "1",
+              type: CalendarDayType.Type01,
+            },
+            {
+              text: "2",
+              type: CalendarDayType.Type01,
+            },
+            {
+              text: "3",
+              type: CalendarDayType.Type01,
+            },
+            {
+              text: "4",
+              type: CalendarDayType.Type01,
+            },
+            {
+              text: "5",
               type: CalendarDayType.Type01,
             },
           ],
@@ -460,7 +477,7 @@ sap.ui.define(
         this._oChosenDayData = { start: oStartDate, end: oEndDate };
         this.sPath = null;
 
-        this._arrangeDialogFragment("Create appointment");
+        this._arrangeDialogFragment("Book a table");
       },
 
       handleStartDateChange: function (oEvent) {

@@ -1,4 +1,4 @@
-<core:FragmentDefinition
+<core:FragmentDefinition xmlns:data="sap.viz.ui5.data"
 		xmlns="sap.m"
 		xmlns:l="sap.ui.layout"
 		xmlns:f="sap.ui.layout.form"
@@ -18,10 +18,23 @@
 					editable="true"
 					layout="ResponsiveGridLayout"
 					singleContainerFullSize="false">
-				<Label text="Title" labelFor="appTitle"/>
-				<Input id="appTitle" maxLength="255"/>
-				<Label text="Additional information" labelFor="inputInfo"/>
-				<Input id="moreInfo" maxLength="255"/>
+				<Label text="Name" labelFor="appTitle" />
+				<Input id="appTitle" maxLength="255" required="true"  placeholder="Type here" />
+
+				<Label text="Email" labelFor="inputEmail" />
+				<Input
+					id="inputEmail"
+					type="Email"
+					placeholder="Enter email"
+					class="sapUiSmallMarginBottom" />
+				<Label text="Message to the restaurant" labelFor="moreInfo" />
+				<Input id="moreInfo" placeholder="Type here" />
+				<Label text="Number of guests" labelFor="inputInfo"/>
+				<Select
+					id="appType"
+					items="{/supportedAppointmentItems}">
+				<core:Item key="{type}" text="{text}" />
+				</Select>
 				<Label text="From" labelFor="startDate"/>
 				<DateTimePicker
 						id="DTPStartDate"
@@ -50,11 +63,7 @@
 						selected="{allDay>/allDay}"
 						select="handleCheckBoxSelect"/>
 				<Label text="Type" labelFor="appType"/>
-				<Select
-						id="appType"
-						items="{/supportedAppointmentItems}">
-					<core:Item key="{type}" text="{text}" />
-				</Select>
+				
 			</f:SimpleForm>
 		</l:VerticalLayout>
 	</Dialog>

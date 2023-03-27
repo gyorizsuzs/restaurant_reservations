@@ -33,7 +33,7 @@
 				stickyMode="{settings>/stickyMode}"
 				appointments="{path: '/appointments'}">
 				<actions>
-					<Button id="addNewAppointment" text="Create" press="handleAppointmentCreate" tooltip="Add new appointment" />
+					<Button id="addNewAppointment" text="{i18n>helloPanelTitle}" press="handleAppointmentCreate" tooltip="Add new appointment" />
 				</actions>
 				<views>
 					<SinglePlanningCalendarDayView key="DayView" title="Day" />
