@@ -78,6 +78,14 @@
         "type": "sap.ui.model.json.JSONModel",
         "uri": "Restaurants.json"
       },
+      "bookings": {
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "Bookings.json"
+      },
+      "messages": {
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "Messages.json"
+      },
       "": {
         "dataSource": "<dataSourceAlias>",
         "settings": {}

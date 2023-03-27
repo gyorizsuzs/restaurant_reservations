@@ -26,6 +26,7 @@
 					id="inputEmail"
 					type="Email"
 					placeholder="Enter email"
+					required="true"
 					class="sapUiSmallMarginBottom" />
 				<Label text="Message to the restaurant" labelFor="moreInfo" />
 				<Input id="moreInfo" placeholder="Type here" />

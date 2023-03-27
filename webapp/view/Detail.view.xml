@@ -26,12 +26,15 @@
 				appointmentResize="handleAppointmentResize"
 				appointmentCreate="handleAppointmentCreateDnD"
 				moreLinkPress="handleMoreLinkPress"
-				startDate="{path: '/startDate'}"
+				startDate=""
+				fullDay="false"
+				startHour="{restaurant>OpeningHours/open}"
+				endHour="{restaurant>OpeningHours/close}"
 				enableAppointmentsDragAndDrop="{settings>/enableAppointmentsDragAndDrop}"
 				enableAppointmentsResize="{settings>/enableAppointmentsResize}"
 				enableAppointmentsCreate="{settings>/enableAppointmentsCreate}"
 				stickyMode="{settings>/stickyMode}"
-				appointments="{path: '/appointments'}">
+				appointments="{restaurant>Bookings}">
 				<actions>
 					<Button id="addNewAppointment" text="{i18n>helloPanelTitle}" press="handleAppointmentCreate" tooltip="Add new appointment" />
 				</actions>
@@ -42,12 +45,12 @@
 				</views>
 				<appointments>
 					<unified:CalendarAppointment
-						title= "{title}"
-						text= "{text}"
+						title= "{restaurant>Bookings/customer}"
+						text= "{restaurant>Bookings/message}"
 						type= "{type}"
 						icon= "{icon}"
-						startDate= "{startDate}"
-						endDate= "{endDate}">
+						startDate= "{restaurant>Bookings/startDate}"
+						endDate= "{restaurant>Bookings/endDate}">
 					</unified:CalendarAppointment>
 				</appointments>
 			</SinglePlanningCalendar>

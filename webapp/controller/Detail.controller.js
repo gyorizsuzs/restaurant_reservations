@@ -36,10 +36,9 @@ sap.ui.define(
 
         var oModel = new JSONModel();
         oModel.setData({
-          startDate: new Date("2023", "3", "1"),
           appointments: [
             {
-              title: "{restaurant>/Bookings/customer}",
+              title: "csumi",
               text: "haliiiii",
               type: CalendarDayType.Type03,
               startDate: new Date("2023", "3", "1", "12", "0"),
@@ -175,10 +174,6 @@ sap.ui.define(
             sAppointmentTitle +
             "'\n has been created"
         );
-      },
-
-      handleViewChange: function () {
-        MessageToast.show("'viewChange' event fired.");
       },
 
       handleAppointmentSelect: function (oEvent) {

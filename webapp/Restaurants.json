@@ -3,7 +3,10 @@
     {
       "Name": "Côte Covent Garden",
       "Address": "17-21 Tavistock St",
-      "OpeningHours": "11:30 AM - 10:00 PM",
+      "OpeningHours": {
+        "open": 11,
+        "close": 22
+      },
       "Bookings": [
         {
           "startDate": "2023-04-01-12-00",
@@ -17,7 +20,10 @@
     {
       "Name": "Côte Sloane Square",
       "Address": "7-12 Sloane Square",
-      "OpeningHours": "9:00 AM - 10:00 PM",
+      "OpeningHours": {
+        "open": 9,
+        "close": 23
+      },
       "Bookings": [
         {
           "date": "2023-04-01",
@@ -38,7 +44,10 @@
     {
       "Name": "Côte Royal Festival Hall",
       "Address": "Festival Terrace, Southbank Centre",
-      "OpeningHours": "9:00 AM - 10:00 PM",
+      "OpeningHours": {
+        "open": 10,
+        "close": 22
+      },
       "Bookings": [
         {
           "date": "2023-04-01",
@@ -52,7 +61,10 @@
     {
       "Name": "Côte Marylebone",
       "Address": "26-27 Devonshire St",
-      "OpeningHours": "9:00 AM - 10:00 PM",
+      "OpeningHours": {
+        "open": 9,
+        "close": 22
+      },
       "Bookings": []
     }
   ],
