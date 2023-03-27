@@ -28,6 +28,13 @@
 					placeholder="example@example.com"
 					required="true"
 					class="sapUiSmallMarginBottom" />
+				<Label text="Telephone" labelFor="inputTelephone" />
+				<Input
+					id="inputTelephone"
+					type="Tel"
+					placeholder="00 12 345 6789"
+					required="true"
+					class="sapUiSmallMarginBottom" />
 				<Label text="Special request" labelFor="moreInfo" />
 				<Input id="moreInfo" placeholder="Type here" maxLength="500" />
 				<Label text="Number of guests" labelFor="inputInfo"/>

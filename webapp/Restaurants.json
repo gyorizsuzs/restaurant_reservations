@@ -4,7 +4,7 @@
       "Name": "Côte Covent Garden",
       "Address": "17-21 Tavistock St",
       "OpeningHours": {
-        "open": 11,
+        "open": 9,
         "close": 22
       },
       "Bookings": [
@@ -22,7 +22,7 @@
       "Address": "7-12 Sloane Square",
       "OpeningHours": {
         "open": 9,
-        "close": 23
+        "close": 22
       },
       "Bookings": [
         {
@@ -45,7 +45,7 @@
       "Name": "Côte Royal Festival Hall",
       "Address": "Festival Terrace, Southbank Centre",
       "OpeningHours": {
-        "open": 10,
+        "open": 9,
         "close": 22
       },
       "Bookings": [

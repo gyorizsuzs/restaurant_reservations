@@ -57,10 +57,9 @@
 		</VBox>
 
 			<FlexBox>
-				<Label text="Send us a message:" class="sapUiSmallMarginEnd" />
-				<Input ></Input>
-				<Button press=".onAddMessage" text="Send message" />
-				<Button press=".onRemoveAll" text="Clear" />
+				<Label text="Contact the restaurant:" class="sapUiSmallMarginEnd" />
+				<Input id="message" class="sapUiSmallMarginEnd" />
+				<Button press=".onAddMessage" class="sapUiSmallMarginEnd" text="Send message" />
 			</FlexBox>
 	</Page>
 </mvc:View>

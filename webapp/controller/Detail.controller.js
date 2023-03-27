@@ -478,13 +478,7 @@ sap.ui.define(
         this._arrangeDialogFragment("Book a table");
       },
 
-      handleStartDateChange: function (oEvent) {
-        var oStartDate = oEvent.getParameter("date");
-        MessageToast.show(
-          "'startDateChange' event fired.\n\nNew start date is " +
-            oStartDate.toString()
-        );
-      },
+      handleStartDateChange: function (oEvent) {},
 
       updateButtonEnabledState: function (
         oDateTimePickerStart,
@@ -574,6 +568,7 @@ sap.ui.define(
           oPicker.setValueState(ValueState.None);
         }
       },
+
       _onObjectMatched: function (oEvent) {
         this.getView().bindElement({
           path:
