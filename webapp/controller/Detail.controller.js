@@ -36,31 +36,31 @@ sap.ui.define(
 
         var oModel = new JSONModel();
         oModel.setData({
-          startDate: new Date("2023", "4", "1"),
+          startDate: new Date("2023", "3", "1"),
           appointments: [
             {
-              title: "{restaurant>/Bookings/customer}",
+              title: "",
               type: CalendarDayType.Type03,
-              startDate: new Date("2023", "4", "1", "12", "0"),
-              endDate: new Date("2023", "4", "1", "14", "0"),
+              startDate: new Date("2023", "3", "1", "12", "0"),
+              endDate: new Date("2023", "3", "1", "14", "0"),
             },
             {
               title: "",
               type: CalendarDayType.Type03,
-              startDate: new Date("2023", "4", "1", "14", "0"),
-              endDate: new Date("2023", "4", "1", "16", "0"),
+              startDate: new Date("2023", "3", "1", "14", "0"),
+              endDate: new Date("2023", "3", "1", "16", "0"),
             },
             {
               title: "",
               type: CalendarDayType.Type03,
-              startDate: new Date("2023", "4", "1", "13", "0"),
-              endDate: new Date("2023", "4", "1", "15", "0"),
+              startDate: new Date("2023", "3", "1", "13", "0"),
+              endDate: new Date("2023", "3", "1", "15", "0"),
             },
             {
               title: "",
               type: CalendarDayType.Type03,
-              startDate: new Date("2023", "4", "1", "15", "0"),
-              endDate: new Date("2023", "4", "1", "17", "0"),
+              startDate: new Date("2023", "3", "1", "15", "0"),
+              endDate: new Date("2023", "3", "1", "17", "0"),
             },
           ],
           supportedAppointmentItems: [
@@ -208,7 +208,7 @@ sap.ui.define(
         if (!this._pDetailsPopover) {
           this._pDetailsPopover = Fragment.load({
             id: oView.getId(),
-            name: "sap.m.sample.SinglePlanningCalendar.Details",
+            name: "sap.ui.demo.walkthrough.view..Details",
             controller: this,
           }).then(function (oResponsivePopover) {
             oView.addDependent(oResponsivePopover);
@@ -259,7 +259,7 @@ sap.ui.define(
         if (!this._pNewAppointmentDialog) {
           this._pNewAppointmentDialog = Fragment.load({
             id: oView.getId(),
-            name: "sap.m.sample.SinglePlanningCalendar.Modify",
+            name: "sap.ui.demo.walkthrough.view.Modify",
             controller: this,
           }).then(function (oNewAppointmentDialog) {
             oView.addDependent(oNewAppointmentDialog);
