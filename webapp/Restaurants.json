@@ -2,65 +2,70 @@
   "Restaurants": [
     {
       "Name": "Côte Covent Garden",
-      "Address": "17-21 Tavistock St",
+      "Address": "17-21 Tavistock St, London",
       "OpeningHours": {
         "open": 9,
         "close": 22
       },
       "Bookings": [
         {
-          "startDate": "2023-04-01-12-00",
-          "endDate": "2023-04-01-14-00",
-          "customer": "John Doe",
-          "pax": "4",
-          "message": ""
+          "title": "John Doe",
+          "type": 2,
+          "text": "Table by the window.",
+          "numberOfGuests": 4,
+          "startDate": "2023-04-01T12:00:00",
+          "endDate": "2023-04-01T14:00:00"
         }
       ]
     },
     {
       "Name": "Côte Sloane Square",
-      "Address": "7-12 Sloane Square",
+      "Address": "7-12 Sloane Square, London",
       "OpeningHours": {
         "open": 9,
         "close": 22
       },
       "Bookings": [
         {
-          "date": "2023-04-01",
-          "startTime": "1:00 PM",
+          "startDate": "2023-03-30T15:00:00",
+          "endDate": "2023-03-30T17:00:00",
           "endTime": "3:00 PM",
-          "reservedBy": "Joe Citizen",
-          "pax": "5"
+          "title": "Joe Citizen",
+          "text": "Going to theatre, have to leave before 4PM.",
+          "type": 2,
+          "numberOfGuests": 5
         },
         {
-          "date": "2023-04-01",
-          "startTime": "4:00 PM",
-          "endTime": "6:00 PM",
-          "reservedBy": "Jane Smith",
-          "pax": "2"
+          "startDate": "2023-04-01T16:00:00",
+          "endDate": "2023-04-01T18:00:00",
+          "title": "Jane Smith",
+          "text": "Anniversary - complimentary bottle of Champagne.",
+          "type": 2,
+          "numberOfGuests": 2
         }
       ]
     },
     {
       "Name": "Côte Royal Festival Hall",
-      "Address": "Festival Terrace, Southbank Centre",
+      "Address": "Festival Terrace, Southbank Centre, London",
       "OpeningHours": {
         "open": 9,
         "close": 22
       },
       "Bookings": [
         {
-          "date": "2023-04-01",
-          "startTime": "2:00 PM",
-          "endTime": "4:00 PM",
-          "reservedBy": "Richard Roe",
-          "pax": "2"
+          "startDate": "2023-04-01T12:00:00",
+          "endDate": "2023-04-01T14:00:00",
+          "title": "Richard Roe",
+          "text": "Bringing birthday cake.",
+          "type": 2,
+          "numberOfGuests": 2
         }
       ]
     },
     {
       "Name": "Côte Marylebone",
-      "Address": "26-27 Devonshire St",
+      "Address": "26-27 Devonshire St, London",
       "OpeningHours": {
         "open": 9,
         "close": 22

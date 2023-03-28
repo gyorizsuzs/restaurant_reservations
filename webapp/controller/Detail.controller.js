@@ -46,14 +46,14 @@ sap.ui.define(
             },
             {
               title: "Jane Smith",
-              text: "Annyversary - complimentary bottle of Champagne.",
+              text: "Anniversary - complimentary bottle of Champagne.",
               type: 2,
               startDate: new Date("2023", "2", "31", "14", "0"),
               endDate: new Date("2023", "2", "31", "16", "0"),
             },
             {
               title: "Joe Citizen",
-              text: "Going to theathre, have to leave before 4PM.",
+              text: "Going to theatre, have to leave before 4PM.",
               type: 5,
               startDate: new Date("2023", "2", "30", "13", "0"),
               endDate: new Date("2023", "2", "30", "15", "0"),
