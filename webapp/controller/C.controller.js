@@ -7,6 +7,7 @@ sap.ui.define(
     "sap/ui/core/Core",
     "sap/m/MessageBox",
     "sap/m/MessageToast",
+    "jquery.sap.storage",
   ],
   function (
     Controller,
@@ -67,6 +68,18 @@ sap.ui.define(
         }, this);
 
         if (!bValidationError) {
+          var oFormData = {
+            name: oView.getModel().getProperty("/name"),
+            email: oView.getModel().getProperty("/email"),
+            message: oView.getModel().getProperty("/message"),
+          };
+
+          jQuery.sap.require("jquery.sap.storage");
+          var oStorage = jQuery.sap.storage(jQuery.sap.storage.Type.local);
+          var aMessages = oStorage.get("Messages") || [];
+          aMessages.push(oFormData);
+          oStorage.put("Messages", aMessages);
+
           MessageToast.show(
             "The input is validated. Your form has been submitted."
           );
