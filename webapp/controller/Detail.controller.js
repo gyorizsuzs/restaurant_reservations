@@ -40,28 +40,28 @@ sap.ui.define(
             {
               title: "John Doe",
               text: "Table by the window.",
-              type: 3,
+              type: CalendarDayType.Type02,
               startDate: new Date("2023", "3", "1", "12", "0"),
               endDate: new Date("2023", "3", "1", "14", "0"),
             },
             {
               title: "Jane Smith",
               text: "Anniversary - complimentary bottle of Champagne.",
-              type: 2,
+              type: CalendarDayType.Type03,
               startDate: new Date("2023", "2", "31", "14", "0"),
               endDate: new Date("2023", "2", "31", "16", "0"),
             },
             {
               title: "Joe Citizen",
               text: "Going to theatre, have to leave before 4PM.",
-              type: 5,
+              type: CalendarDayType.Type04,
               startDate: new Date("2023", "2", "30", "13", "0"),
               endDate: new Date("2023", "2", "30", "15", "0"),
             },
             {
               title: "Richard Roe",
               text: "Bringing birthday cake.",
-              type: 2,
+              type: CalendarDayType.Type05,
               startDate: new Date("2023", "3", "1", "15", "0"),
               endDate: new Date("2023", "3", "1", "17", "0"),
             },
@@ -449,7 +449,7 @@ sap.ui.define(
       },
 
       _getDefaultAppointmentEndHour: function () {
-        return 10;
+        return 11;
       },
 
       _setHoursToZero: function (oDate) {
