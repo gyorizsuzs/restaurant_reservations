@@ -526,8 +526,21 @@ sap.ui.define(
           oErrorState.errorMessage = "Start date should be before End date";
           this._setDateValueState(oDateTimePickerStart, oErrorState);
           this._setDateValueState(oDateTimePickerEnd, oErrorState);
-          //limiting duration
-        } else if (oEndDate - oStartDate > 2) {
+          //limiting duration here
+        } else if (
+          oStartDate &&
+          oEndDate &&
+          oEndDate.getTime() - oStartDate.getTime() < 60 * 60 * 1000
+        ) {
+          oErrorState.errorState = true;
+          oErrorState.errorMessage = "Minimum duration is 1 hour.";
+          this._setDateValueState(oDateTimePickerStart, oErrorState);
+          this._setDateValueState(oDateTimePickerEnd, oErrorState);
+        } else if (
+          oStartDate &&
+          oEndDate &&
+          oEndDate.getTime() - oStartDate.getTime() > 2 * 60 * 60 * 1000
+        ) {
           oErrorState.errorState = true;
           oErrorState.errorMessage =
             "Tables are available only for 2 hours slots.";
