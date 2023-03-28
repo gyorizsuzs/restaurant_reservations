@@ -14,52 +14,48 @@
 			title="{restaurant>Name}"/>
 			<VBox class="sapUiSmallMargin">
 				
-			<SinglePlanningCalendar
-				id="SPC1"
-				class="sapUiSmallMarginTop"
-				title= ""
-				viewChange="handleViewChange"
-				appointmentSelect="handleAppointmentSelect"
-				headerDateSelect="handleHeaderDateSelect"
-				startDateChange="handleStartDateChange"
-				appointmentDrop="handleAppointmentDrop"
-				appointmentResize="handleAppointmentResize"
-				appointmentCreate="handleAppointmentCreateDnD"
-				moreLinkPress="handleMoreLinkPress"
-				startDate=""
-				fullDay="false"
-				startHour="{restaurant>OpeningHours/open}"
-				endHour="{restaurant>OpeningHours/close}"
-				enableAppointmentsDragAndDrop="{settings>/enableAppointmentsDragAndDrop}"
-				enableAppointmentsResize="{settings>/enableAppointmentsResize}"
-				enableAppointmentsCreate="{settings>/enableAppointmentsCreate}"
-				stickyMode="{settings>/stickyMode}"
-				appointments="{path: '/appointments'}">
-				<actions>
-					<Button id="addNewAppointment" text="{i18n>helloPanelTitle}" press="handleAppointmentCreate" tooltip="Add new appointment" />
-				</actions>
-				<views>
-					<SinglePlanningCalendarDayView key="DayView" title="Day" />
-					<SinglePlanningCalendarWeekView key="WeekView" title="Week" />
-					<SinglePlanningCalendarMonthView key="MonthView" title="Month" />
-				</views>
-				<appointments>
-					<unified:CalendarAppointment
-						title= "{title}"
-						text= "{text}"
-						type= "Type03"
-						icon= "{icon}"
-						startDate= "{startDate}"
-						endDate= "{endDate}">
-					</unified:CalendarAppointment>
-				</appointments>
-			</SinglePlanningCalendar>
-		</VBox>
-
-			<FlexBox>
-				<Label text="Contact the restaurant:" class="sapUiSmallMarginEnd" />
-				<Input id="message" class="sapUiSmallMarginEnd" />
-				<Button press=".onAddMessage" class="sapUiSmallMarginEnd" text="Send message" />
-			</FlexBox>
+				<SinglePlanningCalendar
+					id="SPC1"
+					class="sapUiSmallMarginTop"
+					title= ""
+					viewChange="handleViewChange"
+					appointmentSelect="handleAppointmentSelect"
+					headerDateSelect="handleHeaderDateSelect"
+					startDateChange="handleStartDateChange"
+					appointmentDrop="handleAppointmentDrop"
+					appointmentResize="handleAppointmentResize"
+					appointmentCreate="handleAppointmentCreateDnD"
+					moreLinkPress="handleMoreLinkPress"
+					startDate=""
+					fullDay="false"
+					startHour="{restaurant>OpeningHours/open}"
+					endHour="{restaurant>OpeningHours/close}"
+					enableAppointmentsDragAndDrop="{settings>/enableAppointmentsDragAndDrop}"
+					enableAppointmentsResize="{settings>/enableAppointmentsResize}"
+					enableAppointmentsCreate="{settings>/enableAppointmentsCreate}"
+					stickyMode="{settings>/stickyMode}"
+					appointments="{path: '/appointments'}">
+					<actions>
+						<Button id="addNewAppointment" text="{i18n>helloPanelTitle}" press="handleAppointmentCreate" tooltip="Add new appointment" />
+					</actions>
+					<views>
+						<SinglePlanningCalendarDayView key="DayView" title="Day" />
+						<SinglePlanningCalendarWeekView key="WeekView" title="Week" />
+						<SinglePlanningCalendarMonthView key="MonthView" title="Month" />
+					</views>
+					<appointments>
+						<unified:CalendarAppointment
+							title= "{title}"
+							text= "{text}"
+							type= "Type03"
+							icon= "{icon}"
+							startDate= "{startDate}"
+							endDate= "{endDate}">
+						</unified:CalendarAppointment>
+					</appointments>
+				</SinglePlanningCalendar>
+			</VBox>
+		<mvc:XMLView viewName="sap.ui.demo.walkthrough.view.V"/>
+			
 	</Page>
 </mvc:View>

@@ -1,0 +1,46 @@
+<mvc:View
+	controllerName="sap.ui.demo.walkthrough.controller.C"
+	xmlns="sap.m"
+	xmlns:l="sap.ui.layout"
+	xmlns:mvc="sap.ui.core.mvc">
+	<l:VerticalLayout class="sapUiContentPadding" width="100%">
+		<Label text="Message the restaurant" labelFor="nameInput" />
+		<Input
+			id="nameInput"
+			class="sapUiSmallMarginBottom"
+			placeholder="Name"
+			valueStateText="Name must not be empty. Maximum 6 characters."
+			value="{
+				path : '/name',
+				type : 'sap.ui.model.type.String',
+				constraints : {
+					minLength: 1,
+					maxLength: 40
+				}
+			}"
+			change= ".onNameChange" />
+		<Input
+			id="emailInput"
+			class="sapUiSmallMarginBottom"
+			type="Email"
+			placeholder="Email address"
+			valueStateText="E-mail must be a valid email address."
+			value="{
+				path: '/email',
+				type: '.customEMailType'
+			}" />
+        <Input id="messageInput"
+            class="sapUiSmallMarginBottom"
+            placeholder="Type here..."
+            valueStateText="Message cannot be blank."
+            value="{
+				path : '/message',
+				type : 'sap.ui.model.type.String',
+				constraints : {
+					minLength: 1,
+					maxLength: 500
+				}
+			}" />
+		<Button text="Send" press=".onSubmit" />
+	</l:VerticalLayout>
+</mvc:View>
