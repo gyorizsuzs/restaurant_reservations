@@ -1,0 +1,36 @@
+{
+  "Bookings": [
+    {
+      "restaurant": "Côte Covent Garden",
+      "startDate": "2023-04-01-12-00",
+      "endDate": "2023-04-01-14-00",
+      "customer": "John Doe",
+      "pax": "4",
+      "message": ""
+    },
+    {
+      "restaurant": "Côte Sloane Square",
+      "startDate": "2023-04-01-12-00",
+      "endDate": "2023-04-01-14-00",
+      "reservedBy": "Jane Smith",
+      "pax": "2",
+      "message": ""
+    },
+    {
+      "restaurant": "Côte Sloane Square",
+      "startDate": "2023-04-01-13-00",
+      "endDate": "2023-04-01-15-00",
+      "reservedBy": "Joe Citizen",
+      "pax": "5",
+      "message": ""
+    },
+    {
+      "restaurant": "Côte Royal Festival Hall",
+      "startDate": "2023-04-01-13-00",
+      "endDate": "2023-04-01-15-00",
+      "reservedBy": "Richard Roe",
+      "pax": "2",
+      "message": ""
+    }
+  ]
+}
