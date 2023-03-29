@@ -512,7 +512,7 @@ sap.ui.define(
         var oMaximumDateTime = new Date(
           oCurrentDateTime.getFullYear(),
           oCurrentDateTime.getMonth(),
-          oCurrentDateTime.getDate(),
+          oCurrentDateTime.getDate() + 1,
           20,
           0,
           0
@@ -541,12 +541,13 @@ sap.ui.define(
           }
         } else if (oStartDate < oMinimumDateTime) {
           oErrorState.errorState = true;
-          oErrorState.errorMessage = "Start date should be between 9am and 8pm";
+          oErrorState.errorMessage = "Start date should be after opening times";
           this._setDateValueState(oDateTimePickerStart, oErrorState);
           this._setDateValueState(oDateTimePickerEnd, oErrorState);
-        } else if (oStartDate > oMaximumDateTime) {
+        } else if (oStartDate < oMaximumDateTime) {
           oErrorState.errorState = true;
-          oErrorState.errorMessage = "Start date should be between 9am and 8pm";
+          oErrorState.errorMessage =
+            "Start date should be minimum 2 hours before closing";
           this._setDateValueState(oDateTimePickerStart, oErrorState);
           this._setDateValueState(oDateTimePickerEnd, oErrorState);
         } else if (
