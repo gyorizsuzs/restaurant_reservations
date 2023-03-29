@@ -499,9 +499,31 @@ sap.ui.define(
           oDateTimePickerEnd = this.byId("DTPEndDate"),
           oStartDate = oDateTimePickerStart.getDateValue(),
           oEndDate = oDateTimePickerEnd.getDateValue(),
-          oErrorState = { errorState: false, errorMessage: "" };
+          oErrorState = { errorState: false, errorMessage: "" },
+          oCurrentDateTime = new Date();
+        var oMinimumDateTime = new Date(
+          oCurrentDateTime.getFullYear(),
+          oCurrentDateTime.getMonth(),
+          oCurrentDateTime.getDate(),
+          9,
+          0,
+          0
+        );
+        var oMaximumDateTime = new Date(
+          oCurrentDateTime.getFullYear(),
+          oCurrentDateTime.getMonth(),
+          oCurrentDateTime.getDate(),
+          20,
+          0,
+          0
+        );
 
-        if (!oStartDate) {
+        if (oCurrentDateTime.getTime() > oStartDate.getTime()) {
+          oErrorState.errorState = true;
+          oErrorState.errorMessage =
+            "Start date and time should not be earlier than current date and time";
+          this._setDateValueState(oDateTimePickerStart, oErrorState);
+        } else if (!oStartDate) {
           oErrorState.errorState = true;
           oErrorState.errorMessage = "Please pick a date";
           this._setDateValueState(oDateTimePickerStart, oErrorState);
@@ -517,6 +539,16 @@ sap.ui.define(
           } else {
             this._setDateValueState(oDateTimePickerEnd, oErrorState);
           }
+        } else if (oStartDate < oMinimumDateTime) {
+          oErrorState.errorState = true;
+          oErrorState.errorMessage = "Start date should be between 9am and 8pm";
+          this._setDateValueState(oDateTimePickerStart, oErrorState);
+          this._setDateValueState(oDateTimePickerEnd, oErrorState);
+        } else if (oStartDate > oMaximumDateTime) {
+          oErrorState.errorState = true;
+          oErrorState.errorMessage = "Start date should be between 9am and 8pm";
+          this._setDateValueState(oDateTimePickerStart, oErrorState);
+          this._setDateValueState(oDateTimePickerEnd, oErrorState);
         } else if (
           oStartDate &&
           oEndDate &&
@@ -564,13 +596,22 @@ sap.ui.define(
           oStartDate = oDatePickerStart.getDateValue(),
           oEndDate = oDatePickerEnd.getDateValue(),
           bEndDateBiggerThanStartDate =
-            oEndDate.getTime() < oStartDate.getTime(),
-          oErrorState = { errorState: false, errorMessage: "" };
+            oEndDate && oEndDate.getTime() < oStartDate.getTime(),
+          oErrorState = { errorState: false, errorMessage: "" },
+          oCurrentDate = new Date(),
+          bStartDateBeforeCurrentDate =
+            oStartDate && oStartDate.getTime() < oCurrentDate.getTime();
+
+        if (bStartDateBeforeCurrentDate) {
+          oErrorState.errorState = true;
+          oErrorState.errorMessage = "Start date cannot be in the past";
+        }
 
         if (oStartDate && oEndDate && bEndDateBiggerThanStartDate) {
           oErrorState.errorState = true;
           oErrorState.errorMessage = "Start date should be before End date";
         }
+
         this._setDateValueState(oDatePickerStart, oErrorState);
         this._setDateValueState(oDatePickerEnd, oErrorState);
         this.updateButtonEnabledState(
