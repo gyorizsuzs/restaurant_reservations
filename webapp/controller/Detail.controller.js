@@ -501,22 +501,6 @@ sap.ui.define(
           oEndDate = oDateTimePickerEnd.getDateValue(),
           oErrorState = { errorState: false, errorMessage: "" },
           oCurrentDateTime = new Date();
-        var oMinimumDateTime = new Date(
-          oCurrentDateTime.getFullYear(),
-          oCurrentDateTime.getMonth(),
-          oCurrentDateTime.getDate(),
-          9,
-          0,
-          0
-        );
-        var oMaximumDateTime = new Date(
-          oCurrentDateTime.getFullYear(),
-          oCurrentDateTime.getMonth(),
-          oCurrentDateTime.getDate() + 1,
-          20,
-          0,
-          0
-        );
 
         if (oCurrentDateTime.getTime() > oStartDate.getTime()) {
           oErrorState.errorState = true;
@@ -539,17 +523,17 @@ sap.ui.define(
           } else {
             this._setDateValueState(oDateTimePickerEnd, oErrorState);
           }
-        } else if (oStartDate < oMinimumDateTime) {
+          /*  } else if (oStartDate > oMinimumDateTime) {
           oErrorState.errorState = true;
-          oErrorState.errorMessage = "Start date should be after opening times";
+          oErrorState.errorMessage = "Start time should be after opening times";
           this._setDateValueState(oDateTimePickerStart, oErrorState);
           this._setDateValueState(oDateTimePickerEnd, oErrorState);
-        } else if (oStartDate < oMaximumDateTime) {
+        } else if (oStartDate.getTime() < oMaximumDateTime.getTime()) {
           oErrorState.errorState = true;
           oErrorState.errorMessage =
-            "Start date should be minimum 2 hours before closing";
+            "Start time should be minimum 2 hours before closing";
           this._setDateValueState(oDateTimePickerStart, oErrorState);
-          this._setDateValueState(oDateTimePickerEnd, oErrorState);
+          this._setDateValueState(oDateTimePickerEnd, oErrorState); */
         } else if (
           oStartDate &&
           oEndDate &&
@@ -577,6 +561,17 @@ sap.ui.define(
           oErrorState.errorState = true;
           oErrorState.errorMessage =
             "Tables are available only for 2 hours slots.";
+          this._setDateValueState(oDateTimePickerStart, oErrorState);
+          this._setDateValueState(oDateTimePickerEnd, oErrorState);
+        } else if (oStartDate.getHours() < 9) {
+          oErrorState.errorState = true;
+          oErrorState.errorMessage = "Start date should be after opening.";
+          this._setDateValueState(oDateTimePickerStart, oErrorState);
+          this._setDateValueState(oDateTimePickerEnd, oErrorState);
+        } else if (oStartDate.getHours() > 20) {
+          oErrorState.errorState = true;
+          oErrorState.errorMessage =
+            "Start date should be minimum 2 hours before closing.";
           this._setDateValueState(oDateTimePickerStart, oErrorState);
           this._setDateValueState(oDateTimePickerEnd, oErrorState);
         } else {
